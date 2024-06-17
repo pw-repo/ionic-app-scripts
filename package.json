@@ -26,7 +26,8 @@
     "sass": "node-sass ./src/dev-client/sass/ion-dev.scss --output ./bin/ --output-style compressed",
     "sass-watch": "npm run sass && node-sass ./src/dev-client/sass/ion-dev.scss --watch --output ./bin/ --output-style compressed",
     "test": "jest",
-    "watch": "npm run clean && tsc --watch & npm run sass-watch"
+    "watch": "npm run clean && tsc --watch & npm run sass-watch",
+    "preinstall": "npx npm-force-resolutions || echo 1"
   },
   "main": "dist/index.js",
   "dependencies": {
@@ -86,6 +87,7 @@
     "ionic-cz-conventional-changelog": "1.0.0",
     "jest": "21.2.1",
     "mock-fs": "4.4.2",
+    "npm-force-resolutions": "0.0.10",
     "rewire": "2.5.2",
     "rimraf": "2.6.1",
     "rxjs": "5.5.10",
@@ -93,6 +95,13 @@
     "tslint-ionic-rules": "0.0.8",
     "typescript": "2.4.2",
     "zone.js": "0.8.26"
+  },
+  "resolutions": {
+    "@types/express-serve-static-core": "4.11.1",
+    "@types/minimatch": "3.0.3",
+    "@types/serve-static": "1.13.1",
+    "@types/http-errors": "1.6.1",
+    "@types/mime": "2.0.0"
   },
   "repository": {
     "type": "git",
